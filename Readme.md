@@ -36,5 +36,32 @@ Para comprobar que la tabla se haya creado correctamente ejecutamos el siguiente
 
 ---
 
+## Apartado 2
+
+### Enunciado
+
+Inserta 5 registros inventados en la tabla a través de una sentencia SQL.
+
+    INSERT INTO public.EmpresasFCT (nombre, quiereAlumnos, numAlumnos, fechaContacto) VALUES
+    ('Empresa1', true, 5, '2022-01-30'),
+    ('Empresa2', false, 0, '2022-01-30'),
+    ('Empresa3', true, 3, '2022-01-30'),
+    ('Empresa4', false, 0, '2022-01-30'),
+    ('Empresa5', true, 2, '2022-01-30');
+
+![Screenshot_20250204_094436.png](img/Screenshot_20250204_094436.png)
+
+Comprobamos que se hayan insertado correctamente los registros:
+
+    select * from EmpresasFCT;
+
+![Screenshot_20250204_094535.png](img/Screenshot_20250204_094535.png)
+
+
+
+
+
+
+
 
 
