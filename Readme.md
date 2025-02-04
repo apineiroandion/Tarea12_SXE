@@ -115,4 +115,26 @@ Ordenadas por fecha de factura de modo que la primera sea la más reciente
 
 ---
 
+## Apartado 6
+
+### Enunciado
+
+Utilizando las tablas de odoo, obtén un listado de empresas clientes, a las que se les
+ha emitido más de dos facturas de venta (solo venta) conrmadas, mostrando los
+siguientes datos:
+- Nombre de la empresa
+- Número de facturas 
+- total de factura con impuestos
+- Total facturado SIN IMPUESTOS
+
+
+    select invoice_partner_display_name, count(invoice_partner_display_name), sum(amount_untaxed_signed)
+    from account_move where move_type = 'out_invoice'
+    group by invoice_partner_display_name having count(invoice_partner_display_name) > 2;
+
+![Screenshot_20250204_095615.png](img/Screenshot_20250204_095615.png)
+
+---
+
+
 
