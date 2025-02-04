@@ -136,5 +136,51 @@ siguientes datos:
 
 ---
 
+## Apartado 7
 
+### Enunciado
 
+Crea una sentencia que actualice el correo de los contactos cuyo dominio es
+@bilbao.example.com a @bilbao.bizkaia.neus.
+
+    update res_partner
+    set email = replace(email, '@bilbao.example.com', '@bilbao.bizkaia.eus')
+    where email like '%@bilbao.example.com';
+
+![Screenshot_20250204_095819.png](img/Screenshot_20250204_095819.png)
+
+Comprobamos que se hayan actualizado correctamente los correos:
+
+    select name, email from res_partner
+    where email like '%@bilbao.bizkaia.eus';
+
+![Screenshot_20250204_095934.png](img/Screenshot_20250204_095934.png)
+
+## Apartado 8
+
+### Enunciado
+
+La empresa Ready Mat ha hecho un ERE y ha despedido a todos los empleados
+que tenías como contacto. Crea una sentencia que elimine todos los contactos
+pertenecientes a la empresa “Ready Mat”, pero mantén la empresa. Añade una
+captura de pantalla de la sección de contactos de odoo con Ready Mat antes y
+después.
+
+1. Ver los contactos de la empresa Ready Mat antes de eliminarlos:
+
+        select name from res_partner 
+        where parent_id = (select id from res_partner where name = 'Ready Mat');
+    ![Screenshot_20250204_100257.png](img/Screenshot_20250204_100257.png)
+
+2. Eliminar los contactos de la empresa Ready Mat:
+
+        delete from res_partner
+        where commercial_company_name = 'Ready Mat' and is_company = false;
+
+    ![Screenshot_20250204_100354.png](img/Screenshot_20250204_100354.png)
+
+3. Comprobamos que se hayan eliminado correctamente los contactos:
+
+        select name from res_partner 
+        where parent_id = (select id from res_partner where name = 'Ready Mat');
+    ![Screenshot_20250204_100455.png](img/Screenshot_20250204_100455.png)
