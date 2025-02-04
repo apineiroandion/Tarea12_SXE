@@ -156,6 +156,8 @@ Comprobamos que se hayan actualizado correctamente los correos:
 
 ![Screenshot_20250204_095934.png](img/Screenshot_20250204_095934.png)
 
+---
+
 ## Apartado 8
 
 ### Enunciado
