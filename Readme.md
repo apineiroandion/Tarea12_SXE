@@ -57,6 +57,21 @@ Comprobamos que se hayan insertado correctamente los registros:
 
 ![Screenshot_20250204_094535.png](img/Screenshot_20250204_094535.png)
 
+---
+
+## Apartado 3
+
+### Enunciado
+
+Realiza una consulta donde se muestren todos los datos de la tabla EmpresasFCT
+ordenados por fechaContacto, de modo que en la primera la salga el que tenga la
+fecha más reciente.
+
+    select * from EmpresasFCT order by fechaContacto desc;
+
+![Screenshot_20250204_094725.png](img/Screenshot_20250204_094725.png)
+
+---
 
 
 
