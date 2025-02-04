@@ -113,4 +113,6 @@ Ordenadas por fecha de factura de modo que la primera sea la más reciente
 
 ![Screenshot_20250204_095245.png](img/Screenshot_20250204_095245.png)
 
+---
+
 
